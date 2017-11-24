@@ -4,7 +4,7 @@
         
         "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates natus pariatur atque optio necessitatibus voluptatibus vero. Mollitia, at nam temporibus, autem ad cupiditate.",
 
-        "url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain1.jpg?raw=true"
+        "img-url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain1.jpg?raw=true"
 
     },
 
@@ -12,7 +12,7 @@
         
         "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates natus pariatur atque optio necessitatibus voluptatibus vero. Mollitia, at nam temporibus, autem ad cupiditate.",
 
-        "url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain2.jpg?raw=true"
+        "img-url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain2.jpg?raw=true"
 
     },
 
@@ -20,7 +20,7 @@
         
         "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates natus pariatur atque optio necessitatibus voluptatibus vero. Mollitia, at nam temporibus, autem ad cupiditate.",
 
-        "url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain3.jpg?raw=true"
+        "img-url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain3.jpg?raw=true"
 
     },
 
@@ -28,7 +28,7 @@
         
         "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates natus pariatur atque optio necessitatibus voluptatibus vero. Mollitia, at nam temporibus, autem ad cupiditate.",
 
-        "url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain4.jpg?raw=true"
+        "img-url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain4.jpg?raw=true"
 
     }
 
