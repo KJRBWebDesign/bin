@@ -1,34 +1,34 @@
 {
 
-    "image_1" : {
+    "img_1" : {
         
-        "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates natus pariatur atque optio necessitatibus voluptatibus vero. Mollitia, at nam temporibus, autem ad cupiditate.",
+        "img_description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates natus pariatur atque optio necessitatibus voluptatibus vero. Mollitia, at nam temporibus, autem ad cupiditate.",
 
-        "img-url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain1.jpg?raw=true"
+        "img_url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain1.jpg?raw=true"
 
     },
 
-    "image_2" : {
+    "img_2" : {
         
-        "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates natus pariatur atque optio necessitatibus voluptatibus vero. Mollitia, at nam temporibus, autem ad cupiditate.",
+        "img_description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates natus pariatur atque optio necessitatibus voluptatibus vero. Mollitia, at nam temporibus, autem ad cupiditate.",
 
-        "img-url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain2.jpg?raw=true"
+        "img_url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain2.jpg?raw=true"
 
     },
 
-    "image_3" : {
+    "img_3" : {
         
         "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates natus pariatur atque optio necessitatibus voluptatibus vero. Mollitia, at nam temporibus, autem ad cupiditate.",
 
-        "img-url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain3.jpg?raw=true"
+        "img_url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain3.jpg?raw=true"
 
     },
 
-    "image_4" : {
+    "img_4" : {
         
         "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates natus pariatur atque optio necessitatibus voluptatibus vero. Mollitia, at nam temporibus, autem ad cupiditate.",
 
-        "img-url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain4.jpg?raw=true"
+        "img_url" : "https://github.com/KJRBWebDesign/fcc-portfolio/blob/master/assets/img/stock%20photos/mountain4.jpg?raw=true"
 
     }
 
