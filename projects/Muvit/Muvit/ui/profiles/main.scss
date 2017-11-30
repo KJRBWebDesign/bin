@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+/* VARS */
+
+
+$purple_red_dark: #6e3269;
+$purple_red_light: #84357d;
+$lightgreen_blue: #38a5a3;
+$light_blue: #3879aa;
+$dark_blue: #3846af;
+$white_green: #98d28d;
+$white_blue: #94c1d8;
+$white_purple: #d29cdd;
+$white_orange1:  #e2b9a4;
+$white_orange2:  #e6c0ac;
+$purple_1: #9151c1;
+$purple_pink: #b554c4;
+$pink_purple: #c657b4;
+$pink_pink_purple: #c95995;
+$pink_red: #cb5c76;
+$darker_purple: #2b1836;
+$dark_purple: #28193e;
+$dark_green: #236849;
+$mint_mix: #246d6c;
+$hard_blue: #244f71;
+
+$uiColor: #3e1844;
+$uiL5: lighten($uiColor, 5%);
+$uiL10: lighten($uiColor, 10%);
+$uiL15: lighten($uiColor, 15%);
+$uiL20: lighten($uiColor, 20%);
+$uiL21: lighten($uiColor, 21%);
+$uiL22: lighten($uiColor, 22%);
+$uiL23: lighten($uiColor, 23%);
+$uiL24: lighten($uiColor, 23%);
+$uiL25: lighten($uiColor, 25%);
+$uiL30: lighten($uiColor, 30%);
+$uiL35: lighten($uiColor, 35%);
+
+$uiD5: darken($uiColor, 5%);
+$uiD10: darken($uiColor, 10%);
+$uiD15: darken($uiColor, 15%);
+$uiD20: darken($uiColor, 20%);
+$uiD25: darken($uiColor, 25%);
+$uiD30: darken($uiColor, 30%);
+$uiD35: darken($uiColor, 35%);
+
+$siteTextColor: rgba(white, 0.8);
+
+$bg: darken($uiColor,10%);
+
+
+
+
+
+
+/* DOC */
+body {
+    background: linear-gradient(-90deg, $uiD5, $uiD10);
+}
+
+* {
+  margin: 0;
+  font-family: "Open Sans", serif;
+  outline: none;
+  color: white;
+}
+
+.grid {
+    display: flex;
+}
+
+.line  {
+    display: flex;
+    display: inline-block;
+    width: 30%;
+    border-bottom: 2px solid rgba(white, 0.4);
+    vertical-align: middle;
+}
+
+
+
+#header-wrapper {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 64px;
+    background: rgba(black, 0.75);
+    display: flex;
+    align-items: center;
+    // padding: 0 10;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  
+  .length-bar{
+    width: 100%;
+    height: 35px;
+    // border: rgba(white, 0.5) 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 5px 0;
+  }
+  
+  .length-full {
+    position: absolute;
+    width:  100%;
+    height: 4px;
+    background: rgba(white, 0.3);
+  }
+  
+  .length-progress {
+    height: 4px; 
+    background: red;
+    z-index: 2;
+  }
+  
+  .song-meta {
+    display: flex;
+    margin: 0 25px 0 0;
+    max-height: 100%;
+  }
+  
+  
+  #song-pic {
+    height: 64px;
+    width: auto;
+    position: relative;
+    bottom: 0;
+  }
+
+  #music-player {
+    background: rgba(black, 0.5);
+    i {
+        margin: 10px 5px;
+        font-size: 20pt;
+    }
+
+    i:hover {
+        cursor: pointer;
+        filter: brightness(200);
+    }
+  }
+
+  #text-meta {
+    margin: 10px;
+    min-width: 75px;
+    color: white;
+    opacity: 0.9;
+    font-size: 14pt;
+  }
+  
+  .play {
+    transform: scale(1.5);
+  }
+
+  
+  #lib {
+      display: flex;
+      position: fixed;
+      right: 20px;
+      i, a {
+        margin: 0 0.5px;
+        font-size: 24pt;
+      }
+  }
+#header-pills {
+  margin: 10px 5px;
+  width: 100vw;
+  justify-content: flex-start;
+  flex-basis: 1vw;
+
+  i:not(:first-of-type) {
+      margin: 0px 10px;
+  }
+
+  i:first-of-type {
+      font-size: 24pt;
+  }
+}
+
+.input-searchbar {
+    border-radius: 15px;
+    width: 220px;
+    background: rgba(black, 0.1);
+    padding: 2.5px 2px;
+    border: rgba(white,0.5) 2px solid;
+    color: white;
+}
+
+.input-searchbar:focus {
+    animation: searchbar-elongate .3s forwards ease-in;
+}
+
+/*CENTER STAGE*/
+
+main#centerstage-wrapper {
+    z-index: 0;
+    flex-direction: column;
+    min-height: 100vh;
+    flex-basis: 100%; 
+    margin: 5px;
+    // background: green;
+}
+.pointer:hover {
+    cursor: pointer;
+}
+#centerstage-profile {
+    border-bottom: 3px solid rgba($white_purple, 0.1);
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 63px 0 0 0;
+    align-items: center;
+    background-size: cover;
+}
+
+#centerstage-profile-picture {
+    height: 192px;
+    width: 192px;
+    border-radius: 100%;
+}
+
+#profile-pic-wrapper {
+    flex-basis: 100%;
+}
+
+#centerstage-profile-meta-wrapper {
+    text-align: center;
+}
+
+.blur {
+    width: 100%;
+    background: black;
+    z-index: 1000000;
+}
+#centerstage-profile-meta-name {
+    letter-spacing: 4pt;
+    color: lighten($siteTextColor, 10%);
+    text-transform: uppercase;
+    font-size: 32pt;
+    font-weight: 900;
+    i:before {
+        content: "  ";
+    }
+}
+
+#centerstage-tracklist-tracks {
+    -webkit-padding-start: 0px;
+}
+#centerstage-profile-meta-biography {
+    padding: 3% ;
+    text-align: center;
+    font-weight: 600;
+    color: lighten($siteTextColor, 15%);
+}
+
+#centerstage-tracklist {
+    position: relative;
+    background: rgba(black, 0.3);    
+    font-weight: 900;
+    flex-basis: 100%;
+    width: 100%;
+    height: auto; 
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    // border: solid 1px #1d563c;
+    font-family: 'Ubuntu', serif;
+
+    *:not(label) {
+        color: white;
+    }
+}
+
+.tracklist-track{
+    padding: 1% 0px;
+    width: auto;
+    // border-bottom: rgba($white_purple, 0.2) 3px solid;
+    align-items: center;
+    justify-content: flex-start;
+    a {
+        flex-basis: 5%;
+        font-size: 24pt;
+        color: $white_purple !important;
+        text-decoration: none;
+        opacity: 0.6
+    }
+
+    a:hover {
+        opacity: 1;
+    }    
+
+    .tracklist-track-title {
+        flex-basis: 42%;
+        height: 100%;
+    }
+    
+    .tracklist-track-dollar-amount {
+        flex-basis: 35%;
+    }
+}
+
+.tracklist-track:hover {
+    background: rgba(black, 0.3);
+}
+
+
+
+.widget-label {
+    font-weight: 100;
+    font-size: 18pt;
+    color: white;
+    opacity: 0.49;
+    margin: 0 1%;
+    width: auto;
+    border-bottom: rgba($white_purple, 0.3) 3px solid;
+}
+
+/*USERBAR*/
+
+aside#userbar-wrapper {
+    transform-origin: top;
+    transform: scaleY(0);
+    z-index: 1;
+    top: 64px;
+    position: fixed; 
+    width: 23%;
+    right: 0px;
+    flex-direction: column;
+    flex-basis: 30%;
+    // border: #256e5f solid 2px;
+    height: 100vh;
+    overflow-x: scroll;
+    background: linear-gradient(60deg, $uiColor, $uiL10 55%);
+    z-index: 1;
+
+    #close {
+        margin: 5px 5px 5px 0px;
+        color: $uiL35;
+        text-decoration: none;
+    }
+    label > p > i {
+        vertical-align: middle;
+    }
+    label {
+        font-weight: 900;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .input-searchbar {
+        margin: 10px 0px 10px 30px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 5px 20px 0px 5px;
+    }
+
+    ul > li{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: rgba($uiL15, 0.4) 3px solid;
+        height: 25px;
+        align-items: center;
+        padding: 5px;
+    }
+
+    ul > li:first-of-type {
+        opacity: 0.5;
+    }
+  }
+
+
+
+@keyframes searchbar-elongate {
+    100% {
+        width: 227px;
+        filter: brightness(200%);
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    aside#userbar-wrapper {
+        width: 80% !important;
+    }
+
+
+    .line {
+        width: 10%;
+    }
+
+    #centerstage-tracklist {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    aside#userbar-wrapper {
+        width: 40%;
+    }
+
+    @keyframes searchbar-elongate {
+        100% {
+            width: 135px;
+            filter: brightness(200%);
+        }
+    }
+
+
+    .input-searchbar {
+        width: 125px;
+    }
+    header > *:not(#header-pills) {
+        display: none;
+    }
+
+    .tracklist-track{
+        padding: 2% 0;
+    }
+
+    main#centerstage-wrapper {
+        width: 100vw;
+        justify-content: center;
+        font-size: 14pt;
+        margin: 64px 0 0 0;
+        padding: 0;
+    }
+
+    .line {
+        width: 20%;
+    }
+}

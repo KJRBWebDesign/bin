@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Muvit Music Sharing</title>
+</head>
+
+<body>
+
+    <header id="header-wrapper">
+        <div class="grid" id="header-pills">
+            
+          <div id="lib">
+                <i class="material-icons pointer" title="Settings">settings</i>
+                <i class="material-icons pointer" title="Profile">person_outline</i>    
+                <i id="library_icon" title="Music Center" class="pointer material-icons">library_music</i>
+          </div>
+          
+          <i class="material-icons">search</i>
+          <input class="input-searchbar" type="search" placeholder="Search..." />
+          
+        </div>
+
+    </header>  
+
+
+    <div class="grid" id="page-wrapper">
+
+        <!--MAIN-->
+        <main class="grid" id="centerstage-wrapper">
+
+            <div class="grid" id="centerstage-profile">
+              <div class="profile-pic-wrapper">
+                <img id="centerstage-profile-picture" src="https://github.com/KJRBWebDesign/bin/blob/master/projects/Muvit/img/pump.png?raw=true" title="Post Malone" alt="Post Malone"/>
+              </div>
+                <div id="centerstage-profile-meta-wrapper">
+                    <h1 id="centerstage-profile-meta-name">Lil Pump<i class="material-icons" id="verified">verified_user</i></h1>
+                    
+                    <!-- <p id="centerstage-profile-meta-biography">Fugiat dolor officia laboris dolor cupidatat officia fugiat tempor. Ut duis amet sit consequat. Ad pariatur incididunt excepteur esse mollit ex. Enim eu officia dolor aliqua do ullamco cillum dolore.</p> -->
+                </div>
+
+            </div>
+            <div id="centerstage-tracklist">
+                <ul id="centerstage-tracklist-tracks">
+                    <li class="grid tracklist-track">
+                        <!-- <a title="Play"  href="#" class="material-icons">play_arrow</a> -->
+                        <p class="tracklist-track-title">D  Rose</p>
+                        <p class="tracklist-track-dollar-amount">FREE</p>
+                        <p class="tracklist-track-length">2:45</p>
+                    </li>
+                    <li class="grid tracklist-track">
+                        <!-- <a title="Play"  href="#" class="material-icons">play_arrow</a> -->
+                        <p class="tracklist-track-title">Lil Pump</p>
+                        <p class="tracklist-track-dollar-amount">FREE</p>
+                        <p class="tracklist-track-length">1:45</p>
+                    </li>
+                    <li class="grid tracklist-track">
+                        <!-- <a title="Play"  href="#" class="material-icons">play_arrow</a> -->
+                        <p class="tracklist-track-title">Flex Like Ouu</p>
+                        <p class="tracklist-track-dollar-amount">FREE</p>
+                        <p class="tracklist-track-length">2:22</p>
+                    </li>
+                    <li class="grid tracklist-track">
+                        <!-- <a title="Play"  href="#" class="material-icons">play_arrow</a> -->
+                        <p class="tracklist-track-title">Gucci Gang</p>
+                        <p class="tracklist-track-dollar-amount">FREE</p>
+                        <p class="tracklist-track-length">2:34</p>
+                    </li>
+                    <li class="grid tracklist-track">
+                        <!-- <a  title="Play" href="#" class="material-icons">play_arrow</a> -->
+                        <p class="tracklist-track-title">Iced Out ft 2 Chainz</p>
+                        <p class="tracklist-track-dollar-amount">FREE</p>
+                        <p class="tracklist-track-length">3:55</p>
+                    </li>
+                    <li class="grid tracklist-track">
+                        <!-- <a title="Play"  href="#" class="material-icons">play_arrow</a> -->
+                        <p class="tracklist-track-title">Back ft Lil Yachty</p>
+                        <p class="tracklist-track-dollar-amount">FREE</p>
+                        <p class="tracklist-track-length">3:55</p>
+                    </li>
+                    <li class="grid tracklist-track">
+                        <!-- <a title="Play"  href="#" class="material-icons">play_arrow</a> -->
+                        <p class="tracklist-track-title">Boss</p>
+                        <p class="tracklist-track-dollar-amount">FREE</p>
+                        <p class="tracklist-track-length">3:55</p>
+                    </li>
+                    <li class="grid tracklist-track">
+                        <!-- <a title="Play"  href="#" class="material-icons">play_arrow</a> -->
+                        <p class="tracklist-track-title">Molly</p>
+                        <p class="tracklist-track-dollar-amount">FREE</p>
+                        <p class="tracklist-track-length">3:55</p>
+                    </li>
+                </ul>
+
+            </div>
+
+        </main>
+
+        <aside id="userbar-wrapper" class="grid">
+                <div id="userbar-toolbar">
+
+                    <div id="music-player">
+                        <a href="#" id="close" title="Close" class="material-icons">close</a>
+                        <audio id="now-playing"></audio>
+                        <div class="song-meta">
+                            <img id="song-pic">
+                            <div id="text-meta">
+                            </div>
+                            </div>
+                        <i class="material-icons" title="Skip Track - Previous" id="audio_skip_previous">skip_previous</i>
+                        <i class="play material-icons" title="Play" id="audio_play">play_arrow</i>
+                        <i class="material-icons" title="Skip Track - Forward" id="audio_skip_next">skip_next</i>
+                        <i class="material-icons" title="Volume" id="audio_volume" >volume_up</i>
+                        <i class="material-icons" title="Shuffle" id="audio_shuffle" >shuffle</i>
+                        <div class="length-bar">
+                        <div class="length-progress"></div>
+                        <div class="length-full"></div>
+                        </div>
+                    </div>
+
+                    <label>
+                        <p>
+                                <span class="line"></span>My Music<span class="line"></span><i class="material-icons">keyboard_arrow_down</i>
+                        </p>
+                    </label>
+                    <ul>
+                            <li>
+                                    <p></p>
+                                    <p class="toolbar-song"><em>  Song  </em></p>
+                                    <p class="toolbar-artist"><em>  Artist  </em> </p>
+                                </li>
+            
+                                <li>
+                                        <i class="material-icons">play_arrow</i>
+                                        <p class="toolbar-song">Gucci Gang</p>
+                                        <p class="toolbar-artist">Lil Pump</p>
+                                    </li>
+                
+                                    <li>
+                                        <i class="material-icons">play_arrow</i>
+                                        <p class="toolbar-song">Gucci Gang</p>
+                                        <p class="toolbar-artist">Lil Pump</p>
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">play_arrow</i>
+                                        <p class="toolbar-song">Gucci Gang</p>
+                                        <p class="toolbar-artist">Lil Pump</p>
+                                    </li>
+                
+                                    <li>
+                                        <i class="material-icons">play_arrow</i>
+                                        <p class="toolbar-song">Gucci Gang</p>
+                                        <p class="toolbar-artist">Lil Pump</p>
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">play_arrow</i>
+                                        <p class="toolbar-song">Gucci Gang</p>
+                                        <p class="toolbar-artist">Lil Pump</p>
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">play_arrow</i>
+                                        <p class="toolbar-song">Gucci Gang</p>
+                                        <p class="toolbar-artist">Lil Pump</p>
+                                    </li>                                <li>
+                                            <i class="material-icons">play_arrow</i>
+                                            <p class="toolbar-song">Gucci Gang</p>
+                                            <p class="toolbar-artist">Lil Pump</p>
+                                        </li>
+                    
+                                        <li>
+                                            <i class="material-icons">play_arrow</i>
+                                            <p class="toolbar-song">Gucci Gang</p>
+                                            <p class="toolbar-artist">Lil Pump</p>
+                                        </li>
+                                        <li>
+                                            <i class="material-icons">play_arrow</i>
+                                            <p class="toolbar-song">Gucci Gang</p>
+                                            <p class="toolbar-artist">Lil Pump</p>
+                                        </li>
+                    
+                                        <li>
+                                            <i class="material-icons">play_arrow</i>
+                                            <p class="toolbar-song">Gucci Gang</p>
+                                            <p class="toolbar-artist">Lil Pump</p>
+                                        </li>
+                                        <li>
+                                            <i class="material-icons">play_arrow</i>
+                                            <p class="toolbar-song">Gucci Gang</p>
+                                            <p class="toolbar-artist">Lil Pump</p>
+                                        </li>
+                                        <li>
+                                            <i class="material-icons">play_arrow</i>
+                                            <p class="toolbar-song">Gucci Gang</p>
+                                            <p class="toolbar-artist">Lil Pump</p>
+                                        </li>                                <li>
+                                                <i class="material-icons">play_arrow</i>
+                                                <p class="toolbar-song">Gucci Gang</p>
+                                                <p class="toolbar-artist">Lil Pump</p>
+                                            </li>
+                        
+                                            <li>
+                                                <i class="material-icons">play_arrow</i>
+                                                <p class="toolbar-song">Gucci Gang</p>
+                                                <p class="toolbar-artist">Lil Pump</p>
+                                            </li>
+                                            <li>
+                                                <i class="material-icons">play_arrow</i>
+                                                <p class="toolbar-song">Gucci Gang</p>
+                                                <p class="toolbar-artist">Lil Pump</p>
+                                            </li>
+                        
+                                            <li>
+                                                <i class="material-icons">play_arrow</i>
+                                                <p class="toolbar-song">Gucci Gang</p>
+                                                <p class="toolbar-artist">Lil Pump</p>
+                                            </li>
+                                            <li>
+                                                <i class="material-icons">play_arrow</i>
+                                                <p class="toolbar-song">Gucci Gang</p>
+                                                <p class="toolbar-artist">Lil Pump</p>
+                                            </li>
+                                            <li>
+                                                <i class="material-icons">play_arrow</i>
+                                                <p class="toolbar-song">Gucci Gang</p>
+                                                <p class="toolbar-artist">Lil Pump</p>
+                                            </li>
+                    </ul>
+                </div>
+            </aside>
+            
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="page.js"></script>
+</html>

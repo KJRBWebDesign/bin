@@ -1,0 +1,15 @@
+{
+  "0": {
+    "title": "Gucci Gang",
+    "artist": "Lil Pump", 
+    "src":  "https://raw.githubusercontent.com/KJRBWebDesign/bin/master/projects/Muvit/Gucci_Gang.mp3",
+    "picture": "https://raw.githubusercontent.com/KJRBWebDesign/bin/141997db4d9dfda83a3c146da651a6e4df83357f/projects/Muvit/img/album_cover.jpg"
+  },  
+  
+  "1": {
+    "title": "White Iverson",
+    "artist": "Post Malone", 
+    "src":  "https://raw.githubusercontent.com/KJRBWebDesign/bin/master/projects/Muvit/Post_Malone_-_White_Iverson%5BMp3Converter.net%5D.mp3",
+    "picture": "https://raw.githubusercontent.com/KJRBWebDesign/bin/141997db4d9dfda83a3c146da651a6e4df83357f/projects/Muvit/img/post.png"
+  }
+}
