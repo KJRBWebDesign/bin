@@ -3,6 +3,8 @@ var pageObject = {
     /* VALUES */
     "toolBarOut": false,
     "playingMusic": false,
+    "muted" : false,
+    "volume" : 0.5,
     "libDom": document.querySelector("#library_icon"),
     "toolBarDom": document.querySelector("#userbar-wrapper"),
     "mainDom": document.querySelector("#centerstage-wrapper"),
@@ -44,6 +46,16 @@ var pageObject = {
           });
           $(pageObject.mainDom).on("click", function() {
               pageObject.helperFunctions.moveToolbarIn();
+          });
+        },
+
+        
+        "generateNewAudio" : function() {
+          $.getJSON("queue.json", function(json) {
+            pageObject.queueObject = new pageObject.Constructor.Queue(json, "queue.json")
+            pageObject.currentAudio = new pageObject.Constructor.CurrentAudio(pageObject.queueObject.queue, pageObject.queueObject.currentIndex);
+            pageObject.currentAudio.changeMusicPlayerMeta();
+            pageObject.currentAudio.playMusic();
           });
         },
 
@@ -103,20 +115,32 @@ var pageObject = {
             this.skipNext = function() {
               pageObject.queueObject.currentIndex++;
               pageObject.currentAudio.audioElement.pause();
-              pageObject.currentAudio = new pageObject.Constructor.CurrentAudio(this.queue, this.currentIndex);
+              pageObject.currentAudio = new pageObject.Constructor.CurrentAudio(json, this.currentIndex);
               pageObject.currentAudio.changeMusicPlayerMeta();
               $(pageObject.audioPlayDom).html("pause");
             }
 
+            this.skipPrevious = function() {
+              pageObject.queueObject.currentIndex--;
+              pageObject.currentAudio.audioElement.pause();
+              pageObject.currentAudio = new pageObject.Constructor.CurrentAudio(json, this.currentIndex);
+              pageObject.currentAudio.changeMusicPlayerMeta();
+              $(pageObject.audioPlayDom).html("pause");
+            }
+
+            this.playRandomSong = function() {
+              pageObject.currentAudio.audioElement.pause();
+              let randomIndex = Math.floor(Math.random * Object.keys(json) - 1);
+              pageObject.currentAudio = new pageObject.Constructor.CurrentAudio(json, randomIndex);
+              pageObject.currentAudio.changeMusicPlayerMeta();
+              $(pageObject.audioPlayDom).html("pause");
+            }
         }
     }
 };
 
-/*  LOGIC  */
 
-/* MUSIC PLAYER ::  GET QUEUE JSON, MAKE QUEUE OBJECT */
-
-/* TOOLBAR */
+/* TOOLBAR ANIMATION */
 $(pageObject.libDom).on("click", function() {
 
     pageObject.helperFunctions.listenForClose();
@@ -135,12 +159,7 @@ $(pageObject.libDom).on("click", function() {
 $(pageObject.audioPlayDom).on("click", function() {
 
     if (!pageObject.playingMusic && Object.keys(pageObject.currentAudio).length == 0) {
-        $.getJSON("queue.json", function(json) {
-            pageObject.queueObject = new pageObject.Constructor.Queue(json, "queue.json")
-            pageObject.currentAudio = new pageObject.Constructor.CurrentAudio(pageObject.queueObject.queue, pageObject.queueObject.currentIndex);
-            pageObject.currentAudio.changeMusicPlayerMeta();
-            pageObject.currentAudio.playMusic();
-        });
+      pageObject.helperFunctions.generateNewAudio();
     } 
     else if (!pageObject.playingMusic && Object.keys(pageObject.currentAudio).length != 0) {
       pageObject.currentAudio.playMusic();
@@ -149,12 +168,11 @@ $(pageObject.audioPlayDom).on("click", function() {
     else if (pageObject.playingMusic) {
         pageObject.currentAudio.pauseMusic();
     }
+
 });
 
 /* SKIP FORWARD*/
 $(pageObject.audioSkipNextDom).on("click", function() {
-
-  /* Looks at queue.currentIndex then currentAudio = new CurrentAudio(queueObject, currentIndex != queue.length ?  currentIndex++ : currentIndex = 0) */   
 
     if (pageObject.queueObject.currentIndex == Object.keys(pageObject.queueObject.queue).length - 1) {
         pageObject.queueObject.currentIndex = -1;
@@ -166,18 +184,25 @@ $(pageObject.audioSkipNextDom).on("click", function() {
 
 /* SKIP BACK */
 $(pageObject.audioSkipPreviousDom).on("click", function() {
+
     if (pageObject.queueObject.currentIndex == 0) {
         pageObject.queueObject.currentIndex = Object.keys(pageObject.queueObject.queue).length;
-        pageObject.currentAudio.changeMusicPlayerMeta();
     }
 
-    console.log("clicked");
-    pageObject.queueObject.currentIndex--;
-    pageObject.currentAudio.audioElement.pause();
-    pageObject.currentAudio = new pageObject.Constructor.CurrentAudio(pageObject.queueObject.queue, pageObject.queueObject.currentIndex);
-    pageObject.currentAudio.changeMusicPlayerMeta();
-    $(pageObject.audioPlayDom).html("pause");
+    pageObject.queueObject.skipPrevious();
+
 });
 
 
+$(pageObject.audioVolumeButtonDom).on("click", function(){  
 
+  if(pageObject.muted) {
+    pageObject.currentAudio.audioElement.volume = pageObject.volume;
+    pageObject.muted = false;
+  }
+
+  else {
+    pageObject.currentAudio.audioElement.volume = 0.0;
+    pageObject.muted = true;
+  }
+});
