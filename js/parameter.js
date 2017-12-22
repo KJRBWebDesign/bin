@@ -22,9 +22,9 @@ var Parameter = {
       Parameter.allowedVariables = allowed;
       Parameter.parseURL(delimeter);
       Parameter.updateVariables();
-      return Parameter.vars
+      return Parameter.vars;
     });
   }
 }
 
-Parameter.updateVariablesOnload(["hello"], "?"); //test
+Parameter.updateVariablesOnload(["hello"], "?");
