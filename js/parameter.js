@@ -3,9 +3,7 @@ var Parameter = {
   vars:  {},
   allowedVariables: [],
   onLoad: function(callback) {
-
       window.onload = callback();
-    
   },
   parseURL: function(delimeter) {
       let varArray = window.location.href.split(delimeter).slice(1, this.length);
