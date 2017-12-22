@@ -27,4 +27,4 @@ var Parameter = {
   }
 }
 
-Parameter.updateVariablesOnload(["hello"], "?");
+Parameter.updateVariablesOnload(["hello"], "?"); //test
