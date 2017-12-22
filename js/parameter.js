@@ -34,11 +34,11 @@ var Parameter = {
 
     Parameter.onLoad.foo(function(){
       Parameter.allowedVariables = allowed;
-      Parameter.parseURL.foo(delimeter);
-      Parameter.updateVariables.foo();
+      Parameter.parseURL(delimeter);
+      Parameter.updateVariables();
       return Parameter.vars
     });
-    
+
   }
 }
 
