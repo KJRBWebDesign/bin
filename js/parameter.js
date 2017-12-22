@@ -32,7 +32,7 @@ var Parameter = {
 
   updateVariablesOnload: function(allowed, delimeter) {
 
-    Parameter.onLoad.foo(function(){
+    Parameter.onLoad(function(){
       Parameter.allowedVariables = allowed;
       Parameter.parseURL(delimeter);
       Parameter.updateVariables();
